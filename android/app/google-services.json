@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "646982412585",
+    "project_id": "marvel-world-527a6",
+    "storage_bucket": "marvel-world-527a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646982412585:android:ca3c096fc0e3ee49756f38",
+        "android_client_info": {
+          "package_name": "com.example.marvel_world"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646982412585-k97k121toi7pukh38mjin9f193e4nvdo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marvel_world",
+            "certificate_hash": "dee2e66bca471863ff9ee0f30e8d327846d0e3da"
+          }
+        },
+        {
+          "client_id": "646982412585-bthg8668lrjeifnrsmrmbnf8kqkc2a8u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi3aoUmpF_11X_axONses9-E49WuxfBYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646982412585-bthg8668lrjeifnrsmrmbnf8kqkc2a8u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
