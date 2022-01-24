@@ -36,9 +36,11 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
     if (mounted) {
-      setState(() {
-        /* ... */
-      });
+      setState(
+        () {
+          /* ... */
+        },
+      );
     }
   }
 
@@ -49,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         bottom: false,
         child: Container(
-          margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+          margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -63,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
               if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                 CatalogList().expand()
               else
-                CircularProgressIndicator().centered().expand()
+                const CircularProgressIndicator().centered().expand()
             ],
           ),
         ),

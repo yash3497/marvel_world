@@ -15,7 +15,7 @@ class CatalogImage extends StatelessWidget {
     )
         .box
         .make()
-        .wPCT(context: context, widthPCT: 50)
+        .wPCT(context: context, widthPCT: 100)
         .hPCT(context: context, heightPCT: 100);
 
     // .box

@@ -33,19 +33,56 @@ class CatalogItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String color = "0xFF" + catalog.color;
-    return VxBox(
+    return Container(
+      height: 250,
+      margin: const EdgeInsets.only(bottom: 20),
       child: Row(
         children: [
-          Hero(
-              tag: Key(catalog.name), child: CatalogImage(image: catalog.image))
+          Expanded(
+            child: Stack(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      color: Color(int.parse(color)).withOpacity(0.65),
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade300,
+                            blurRadius: 30,
+                            offset: const Offset(0, 10)),
+                      ]),
+                  margin: const EdgeInsets.only(top: 50),
+                ),
+                Align(child: CatalogImage(image: catalog.image))
+              ],
+            ),
+          ),
+          Expanded(
+              child: Container(
+            margin: const EdgeInsets.only(top: 70, bottom: 20),
+            padding: const EdgeInsets.only(left: 10),
+            decoration: BoxDecoration(
+              color: context.cardColor,
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.shade300,
+                    blurRadius: 30,
+                    offset: const Offset(0, 10)),
+              ],
+              borderRadius: const BorderRadius.only(
+                  topRight: Radius.circular(20),
+                  bottomRight: Radius.circular(20)),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                catalog.name.text.xl3.color(Color(0xff123456)).bold.make(),
+              ],
+            ),
+          ))
         ],
       ),
-    )
-        .color(context.cardColor)
-        .rounded
-        .square(250)
-        .color(Color(int.parse(color)).withOpacity(0.5))
-        .make()
-        .py16();
+    );
   }
 }
