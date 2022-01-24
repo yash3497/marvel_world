@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:marvel_world/models/catalog.dart';
 import 'package:marvel_world/widgets/catalog_list.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -46,14 +47,21 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: context.canvasColor,
       body: SafeArea(
+        bottom: false,
         child: Container(
-          padding: Vx.m32,
+          margin: EdgeInsets.only(top: 20, left: 20, right: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              "Super Hero's".text.xl5.color(context.accentColor).bold.make(),
+              "Super Hero's"
+                  .text
+                  .xl5
+                  .color(context.theme.accentColor)
+                  .bold
+                  .make(),
+              16.0.heightBox,
               if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-                CatalogList().py16().expand()
+                CatalogList().expand()
               else
                 CircularProgressIndicator().centered().expand()
             ],
